@@ -3,13 +3,20 @@
 }
 .Registration {
   text-align: center;
+  
+}
+.login{
+  text-align: right;
 }
 h1{
   text-align: center;
+  padding-bottom: 1.5rem;
 }
 .btn-block {
   display: block;
-  width: 100%;
+  width: 20%;
+  height: 20%;
+  justify-items: center;
 }
 .btn-lg, .btn-group-lg > .btn {
     padding: 0.75rem 1.5rem;
@@ -62,4 +69,33 @@ button, input, optgroup, select, textarea {
   to {
     transform: rotate(360deg);
   }
+}
+.logincontent{
+  padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 7rem;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.forget{
+  text-align: right;
+}
+.acc{
+  text-align: right;
+  
+}
+.rec{
+  text-align: left;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+.login{
+
+  padding: 0.5rem 1.8rem;
+}
+
+.checkbox{
+  padding-right: 4rem;
+}
+.loginlink{
+  padding-left: 5px;
 }

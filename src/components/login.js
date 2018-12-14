@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {Badge,Form, FormGroup, Label, Input, Container, Row, Col,InputGroup, InputGroupAddon, Fade, Button } from 'reactstrap';
 
 class Login extends Component {
     constructor() {
@@ -33,23 +34,56 @@ class Login extends Component {
 
     render() {
         return (
+            <Container>
+                
+                <Row>
+          <Col sm="12" md={{ size: 4, offset: 4 }} className="logincontent">
         <div className="FormCenter">
-            <form onSubmit={this.handleSubmit} className="FormFields" onSubmit={this.handleSubmit}>
+         
+            <Form onSubmit={this.handleSubmit} className="FormFields" onSubmit={this.handleSubmit}>
             <div className="FormField">
-                <label>E-Mail Address</label>
-                <input type="email" id="email" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+            <div>
+            <h1>Login</h1>
+            </div>
+           
+            <Form>
+        <FormGroup>
+            
+        <Input type="email" name="email" id="exampleEmail" placeholder="Email" />
+      
+      <br />
+        </FormGroup>
+        <FormGroup>
+         
+          <Input type="password" name="password" id="examplePassword" placeholder="password" />
+         
+        </FormGroup>
+        
+      </Form>
+      </div>
+      <div>
+      <label className="checkbox">
+                    <input type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} />Remember Me
+                    </label>
+            
+             
+           
+        <Link to="/" ><label className="forget">Forget password.?</label></Link><br />
+        </div>
+        <Button color="primary" size="lg" className ="login">Login</Button><br />
+        
+        <div>
+        <Link to="/"><label className="rec">Recover password</label></Link>
+        <Link to="/"><label className="acc">Create an account</label></Link>
+     
+                 
               </div>
-
-              <div className="FormField">
-                <label>Password</label>
-                <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
-              </div>
-
-              <div className="FormField">
-                  <button className="FormField__Button mr-20">Login</button> <Link to="/" className="FormField__Link">Create an account</Link>
-              </div>
-            </form>
+            </Form>
           </div>
+          </Col>
+        </Row>
+        
+          </Container>
         );
     }
 }

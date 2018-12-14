@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {Badge,Form, FormGroup, Label, Input, Container, Row, Col,InputGroup, InputGroupAddon, Fade, Button } from 'reactstrap';
 
 class Registration extends Component {
     constructor() {
@@ -35,32 +36,57 @@ class Registration extends Component {
 
     render() {
         return (
-        <div className="FormCenter">
-            <form onSubmit={this.handleSubmit} className="FormFields">
-              <div className="FormField">
-                <label>Full Name</label>
-                <input type="text" id="name" className="FormField__Input" placeholder="Enter your full name" name="name" value={this.state.name} onChange={this.handleChange} />
-              </div>
-              <div className="FormField">
-                <label>Password</label>
-                <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
-              </div>
-              <div className="FormField">
-                <label>E-Mail Address</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
-              </div>
+            <Container>
+                
+            <Row>
+            <Col sm="12" md={{ size: 4, offset: 4 }} className="logincontent">
+    <div className="FormCenter">
+
+     
+        <Form onSubmit={this.handleSubmit} className="FormFields" onSubmit={this.handleSubmit}>
+      
+        <div>
+        <h1>Register</h1>
+        </div>
+              <Form>
+        <FormGroup>
+       
+        
+          
+          <Input type="text" name="username" id="examplename" placeholder="Username" />
+      <br />
+        </FormGroup>
+        <FormGroup>
+         
+          <Input type="email" name="email" id="exampleemail" placeholder="Email" />
+        </FormGroup>
+        <FormGroup>
+        <br />
+         <Input type="password" name="password" id="examplePassword" placeholder="password" />
+       </FormGroup>
+        
+      </Form>
+      
 
               <div className="FormField">
                 <label className="FormField__CheckboxLabel">
-                    <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
+                    <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in <a href="" className="FormField__TermsLink">Terms of service</a>
                 </label>
               </div>
 
               <div className="FormField">
-                  <button className="FormField__Button mr-20">Registration</button> <Link to="/login" className="FormField__Link">I'm already member</Link>
+              <Button color="primary" size="lg" className ="login">Register</Button><br />
+              <label className="mem">Already have an account.?</label> 
+                  <Link to="/login" className="loginlink">Login</Link>
               </div>
-            </form>
-          </div>
+         
+           
+            </Form>
+            </div>
+            </Col>
+          </Row>
+
+          </Container>
         );
     }
 }
