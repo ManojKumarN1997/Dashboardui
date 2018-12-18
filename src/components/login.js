@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {Badge,Form, FormGroup, Label, Input, Container, Row, Col,InputGroup, InputGroupAddon, Fade, Button } from 'reactstrap';
-
+import Homepage from './homepage';
 class Login extends Component {
     constructor() {
         super();
@@ -70,8 +70,9 @@ class Login extends Component {
            
         <Link to="/" ><label className="forget">Forget password.?</label></Link><br />
         </div>
-        <Button color="primary" size="lg" className ="login">Login</Button><br />
-        
+        <Link to="/homepage"><Button color="primary" size="lg" className ="login">Login</Button>
+        </Link><br />
+    
         <div>
         <Link to="/"><label className="rec">Recover password</label></Link>
         <Link to="/"><label className="acc">Create an account</label></Link>
