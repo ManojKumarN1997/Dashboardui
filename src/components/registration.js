@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {Badge,Form, FormGroup, Label, Input, Container, Row, Col,InputGroup, InputGroupAddon, Fade, Button } from 'reactstrap';
-
+import Homepage1 from './homepage1';
 class Registration extends Component {
     constructor() {
         super();
@@ -75,7 +75,8 @@ class Registration extends Component {
               </div>
 
               <div className="FormField">
-              <Button color="primary" size="lg" className ="login">Register</Button><br />
+              <Link to="/homepage1"><Button color="primary" size="lg" className ="login">Register</Button>
+        </Link><br />
               <label className="mem">Already have an account.?</label> 
                   <Link to="/login" className="loginlink">Login</Link>
               </div>

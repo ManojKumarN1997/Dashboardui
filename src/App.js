@@ -5,6 +5,7 @@ import Registration from './components/registration';
 import Homepage from './components/homepage';
 import Profile from './components/profile';
 import Message from './components/message';
+import Homepage1 from './components/homepage1';
 import './App.css';
 
 class App extends Component {
@@ -24,7 +25,8 @@ class App extends Component {
              </Route>
              <Route path="/message" component={Message}>
              </Route>
-            
+             <Route path="/homepage1" component={Homepage1}>
+              </Route>
             
           </div>
 

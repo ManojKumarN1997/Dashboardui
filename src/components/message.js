@@ -1,11 +1,14 @@
 import React from 'react';
 import {Row,Col,Container,fluid,Button,Text,Collapse,Navbar,NavbarToggler,
         NavbarBrand,Nav,NavItem,NavLink,Card,CardTitle,CardText,
-    UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem } from 'reactstrap';
+    UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem,Fade  } from 'reactstrap';
+    
+
 export default class Message extends React.Component {
    constructor(props) {
     super(props);
-
+    this.state = { fadeIn: true };
+    this.toggle = this.toggle.bind(this);
    this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
